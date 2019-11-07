@@ -1,47 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
+
 <body>
 
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">WebSiteName</a>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">WebSiteName</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">About Us</a></li>
+
+      </ul>
     </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">About Us</a></li>
+  </nav>
 
-    </ul>
-  </div>
-</nav>
-  
-<div class="container">
-  <h3><p>Passerelles numeriques IT Training Program 2020</p></h3>
-  <h3><p>Application Form</p></h3>
+  <div class="container">
+    <h3>
+      <p>Passerelles numeriques IT Training Program 2020</p>
+    </h3>
+    <h3>
+      <p>Application Form</p>
+    </h3>
+
+    <label>LASTNAME:</label><input type="text">
+    <label>FIRSTNAME:</label><input type="text">
+    <label>MIDDLE NAME:</label><input type="text">
+
+    <h1>DATE OF BIRTH:</h1>
+    <label>(MM)</label><input type="text">
+    <label>(DD)</label><input type="text">
+    <label>(YYYY)</label><input type="text">
+
+    <h1>ADDRESS</h1>
+    <label>SITIO AND BARANGAY:</label><input type="text">
+    <label>CITY/MUNICIPALITY:</label><input type="text">
+    <label>PROVINCE</label><input type="text">
+    <h1>CONTACT INFORMATION:</h1>
+    <p>Please provide two cellphone numbers that we can use to reach you. Please do not forget to indicate the owner of
+      the numbers you provided.</p>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">No.</th>
+          <th scope="col">cell phone Numbers</th>
+          <th scope="col">Owner / Relationship to the Owner</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td><textarea></textarea></td>
+          <td><textarea></textarea></td>
+
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td><textarea></textarea></td>
+          <td><textarea></textarea></td>
+
+        </tr>
+
+      </tbody>
+    </table>
+    <h1>What is your email address?</h1>
+    <input type="text">
+    <h1>Do you have Facebook account?</h1>
+    <button type="button" class="btn btn-primary btn-lg">YES</button>
+    <button type="button" class="btn btn-secondary btn-lg">NO</button>
+
+    <h1>SENIOR HIGH SCHOOL NAME:</h1>
+    <input type="text">
+    <h1>WHAT TRACK DID YOU ENROLL:</h1>
+    <input type="text">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">Academic</th>
+          <th scope="col">Technical-Vocational-Livelihood</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+
+          <td>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <input type="radio" aria-label="Radio button for following text input">
+                </div>
+                <h2 style="margin-left:10px;">ABM</h2>
+              </div>
+
+            </div>
+          </td>
+          <td>
+              <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <input type="radio" aria-label="Radio button for following text input">
+                    </div>
+                    <h2 style="margin-left:10px;">AGRI-FISHERY</h2>
+                  </div>
     
-  <label>LASTNAME:</label><input type="text">
-  <label>FIRSTNAME:</label><input type="text">
-  <label>MIDDLE NAME:</label><input type="text">
-  
-  <h1>DATE OF BIRTH:</h1>
-  <label>(MM)</label><input type="text">
-  <label>(DD)</label><input type="text">
-  <label>(YYYY)</label><input type="text">
+                </div>
+          </td>
 
-  <h1>ADDRESS</h1>
-  <label>SITIO AND BARANGAY:</label><input type="text">
-  <label>CITY/MUNICIPALITY:</label><input type="text">
-  <label>PROVINCE</label><input type="text">
-  <h1>CONTACT INFORMATION:</h1>
-  <p>Please provide two cellphone numbers that we can use to reach you. Please do not forget to indicate the owner of the numbers you provided.</p>
-</div>
+        </tr>
+        <tr>
+          <td>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <input type="radio" aria-label="Radio button for following text input">
+                </div>
+                <h2 style="margin-left:10px;">HUMSS</h2>
+              </div>
+
+            </div>
+          </td>
+          <td>
+              <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <input type="radio" aria-label="Radio button for following text input">
+                    </div>
+                    <h2 style="margin-left:10px;">  HOME ECOMOMICS</h2>
+                  </div>
+    
+                </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <input type="radio" aria-label="Radio button for following text input">
+                </div>
+                <h2 style="margin-left:10px;">STEM</h2>
+              </div>
+
+            </div>
+          </td>
+
+          <td>
+              <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <input type="radio" aria-label="Radio button for following text input">
+                    </div>
+                    <h2 style="margin-left:10px;">ICT</h2>
+                  </div>
+    
+                </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <input type="radio" aria-label="Radio button for following text input">
+                </div>
+                <h2 style="margin-left:10px;">PRE-BACCALAUREATE</h2>
+              </div>
+
+            </div>
+          </td>
+          <td>
+              <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <input type="radio" aria-label="Radio button for following text input">
+                    </div>
+                    <h2 style="margin-left:10px;">INDUSTRIAL ARTS</h2>
+                  </div>
+    
+                </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <input type="radio" aria-label="Radio button for following text input">
+                </div>
+                <h2 style="margin-left:10px;">GENERAL ACADEMIC</h2>
+              </div>
+
+            </div>
+          </td>
+          <td>
+              <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <input type="radio" aria-label="Radio button for following text input">
+                    </div>
+                    <h2 style="margin-left:10px;">TVL MARITIME</h2>
+                  </div>
+    
+                </div>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>  
+    <br>
+    <table>
+      <tr>
+        <td>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <input type="radio" aria-label="Radio button for following text input">
+                  </div>
+                  <h2 style="margin-left:10px;">SPORTS</h2>
+                </div>
+  
+              </div>
+        </td>
+        <td> <div class="input-group">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <input type="radio" aria-label="Radio button for following text input">
+              </div>
+              <h2 style="margin-left:10px;">ARTS AND DESIGN</h2>
+            </div>
+
+          </div></td>
+          <td>
+              <div class="input-group">
+                <label for="">OTHERS:</label>
+                  <input type="text" name="" id="">
+    
+                </div>
+          </td>
+      </tr>
+    </table>
+    <h1>Did you have computer class in high school?</h1>
+    <button type="button" class="btn btn-primary btn-lg">YES</button>
+    <button type="button" class="btn btn-secondary btn-lg">NO</button>
+    <h1>Did you know how to use computer?</h1>
+    <button type="button" class="btn btn-primary btn-lg">YES</button>
+    <button type="button" class="btn btn-secondary btn-lg">NO</button>
+    <h1>Computer Skills(Please tick one or more skills that you have):</h1>
+    <input type="checkbox" name="" id="">Typing
+    <input type="checkbox" name="" id="">Ms Word
+    <input type="checkbox" name="" id="">MS Excel
+    <input type="checkbox" name="" id="">Internet
+    <input type="checkbox" name="" id="">E-mail
+
+    <h1>Do you receive help from an organization or the local government unit(LGU) supporting you in your schooling(financial sponsorship)?</h1>
+    <button type="button" class="btn btn-primary btn-lg">YES</button>
+    <button type="button" class="btn btn-secondary btn-lg">NO</button>
+    <h1>Name of the sponsor / supporting NGO, if there is one:</h1>
+    <input type="text" name="" id="">
+    <br>
+    <h1>FAMILY BACKGROUD:</h1>
+   
+      <h1>How many brothers and sisters do you have?<input type="text"></h1>
+      <h1>Whar is your rank among the siblings?<input type="text"></h1>
+      <h1>Please indicate the occupation of your:
+        <br>
+        Father:
+        <input type="text">
+        Income:
+        <input type="text">
+        Mother:
+        <input type="text">
+        Income:
+        <input type="text">
+      </h1>
+      <h1>Parents' Situation</h1>
+      <input type="checkbox" name="" id="">Married
+    <input type="checkbox" name="" id="">Live-in
+    <input type="checkbox" name="" id="">Separated
+    <input type="checkbox" name="" id="">Father left
+    <input type="checkbox" name="" id="">Father died
+    <input type="checkbox" name="" id="">Mother left
+    <input type="checkbox" name="" id="">Mother died
+   <h1>What is your motivation for entering the Passerellesnumeriques scholarship program?(minimum of 300 words)</h1>
+   <textarea name="" id="" cols="30" rows="10"></textarea>
+   <p>Join us on facebook to get the updates: www.facebook.com/selection.process</p>
+  </div>
 
 </body>
+
 </html>
