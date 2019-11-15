@@ -4,6 +4,7 @@ var http = require('http').createServer(app);
 var port = process.env.PORT || 3000;
 var mongoose = require('mongoose');
 var db = mongoose.connection;
+var bodyParser = require('body-parser');
 var student_info = require('./schema/student_info')
 
 mongoose.connect('mongodb://localhost:27017/pn_registration', {useNewUrlParser: true, useUnifiedTopology: true});
@@ -17,58 +18,59 @@ db.once('open', function() {
   	console.log("we're connected")
 });
 
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
+
 app.get('/', function (req, res) {
   	res.sendFile(__dirname + '/index.html');
 });
 
 app.post('/register', function (req, res) {
+	console.log(req.body);
 	let test = async function () {
       	let data = {
-        	name: ,
-		   	birthdate: {type:String, required: true},
+        	name: req.body.name,
+		   	birthdate: req.body.birthdate,
 		   	address: {
-		      	sitio_and_barangay: {type:String, required: true},
-		      	city_or_municipality: {type:String, required: true},
-		      	province: {type:String, required:true}
+		      	sitio_and_barangay: req.body.sitio_and_barangay,
+		      	city_or_municipality: req.body.city_or_municipality,
+		      	province: req.body.province
 		   	},
 		   	contact_information1: {
-		      	number: Number,
-		      	owner: String
+		      	number: req.body.number1,
+		      	owner: req.body.owner1
 		   	},
 		   	contact_information2: {
-		      	number: Number,
-		      	owner: String
+		      	number: req.body.number2,
+		      	owner: req.body.owner2
 		   	},
-		   	email_address: String,
-		   	facebook_account: String,
-		   	track_enrolled: [String],
-		   	computer_class: String,
-		   	computer_knowledge: String,
-		   	computer_skills: [String],
-		   	organization: String,
+		   	email_address: req.body.email_address,
+			   	highschool_background: {
+			   		name : req.body.highschool,
+				},
+		   	organization: req.body.organization,
 		   	family_background: {
-		      	siblings: Number,
-		      	rank: Number,
+		      	siblings: req.body.siblings,
+		      	rank: req.body.rank,
 		      	father: {
-		         	name: String,
-		         	income: Number
+		         	name: req.body.fathername,
+		         	income: req.body.fatherincome
 		      	},
 		      	mother: {
-		         	name: String,
-		         	income: Number
-		      	},
-		      	parents_situation: String
+		         	name: req.body.mothername,
+		         	income: req.body.motherincome
+		      	}
 		   	},
-		   	motivation: String
+		   	motivation: req.body.motivation
       	}
-      	await event.addEvent(data);
-      	let item = await event.getLastEvent();
-      	res.send(item)
+      	await student_info.addStudent(data);
+      	let last = await student_info.getLastStudent();
+      	res.send(last)
     }
   	test();
 })
 
-app.use(express.static('styles'));
+app.use(express.static('scripts'));
 
 http.listen(port, function () {
   	console.log('listening on *: ' + port);

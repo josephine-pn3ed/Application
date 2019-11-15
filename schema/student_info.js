@@ -17,11 +17,9 @@ var Schema = new mongoose.Schema({
       owner: String
    },
    email_address: String,
-   facebook_account: String,
-   track_enrolled: [String],
-   computer_class: String,
-   computer_knowledge: String,
-   computer_skills: [String],
+   highschool_background: {
+      name : String,
+   },
    organization: String,
    family_background: {
       siblings: Number,
@@ -33,32 +31,19 @@ var Schema = new mongoose.Schema({
       mother: {
          name: String,
          income: Number
-      },
-      parents_situation: String
+      }
    },
    motivation: String
 });
 
-Schema.statics.addPerson = async function (person){
-   var Person = new this(person);
-   var result =  await Person.save(person);
+Schema.statics.addStudent = async function (student){
+   var Person = new this(student);
+   var result =  await Person.save(student);
    return result;
 }
 
-Schema.statics.findItem = async function (item) {
-	return await this.findOne({"item": item});
-}
-
-Schema.statics.countItems = async function() {
-	return this.countDocuments();
-}
-
-Schema.statics.getItems = async function() {
-   return await this.find();
-}
-
-Schema.statics.deleteItem = async function (element) {
-   return await this.deleteOne({"item" : element});
+Schema.statics.getLastStudent = async function () {
+   return await this.findOne().sort({_id:-1}).limit(1);
 }
 
 module.exports = mongoose.model('student_info', Schema);

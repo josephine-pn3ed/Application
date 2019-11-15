@@ -13,6 +13,13 @@
 
 
   <title>Registration Form</title>
+
+<style>
+  .registerform{
+    margin-left: 15%;
+    margin-right:15%;
+  }
+</style>
 </head>
 <style>
 	
@@ -22,8 +29,9 @@
 </style>
 
 <body>
+  
   <div>
-  	
+    
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -38,18 +46,54 @@
   <hr>
   
   <form>
-  	   <div class="row classList">
+       <div class="row classList">
+        <div class="col-md-2"></div>
+            <div class="row classList">
         <div class="col-md-2"></div>
         <div class="col-md-8 ">
             <br><br>
-            <div class=" card">
-            	<center><h3>
+            <div class="card">
+                <br>
+                <center>
+                    <br>
+                    <br>
+                    <div class="container">
+                        <table id="table" class="table table-bordered text-center">
+                            <div class="text-center">
+                                <thead>
+                                    <tr class="table-info">
+                                        <th class="other text-center">Name</th>
+                                        <th class="others text-center">Contact Number</th>
+                                        <th class="others text-center">Municipality</th>
+                                        <th class="action text-center">Action</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody id="body">
+
+                                </tbody>
+
+                        </table>
+                </center>
+
+            </div>
+        
+    </div>
+
+            <br>
+              <br>
+                <br>
+            <div class=" card registerform">
+               <div class="card-header">
+              <center><h3>
     <p>Passerelles numeriques IT Training Program 2020</p>
   </h3>
   <h3>
     <p>Application Form</p>
-  </h3></center>
-            	<div class="container">
+  </h3></center></div>
+  <br>
+  <br>
+        <div class="container">
     <div class="form-row">
       <div class="form-group col-md-4">
         <label for="fname">FIRST NAME : </label>
@@ -79,12 +123,12 @@
     <h6>ADDRESS</h6>
     <div class="form-row">
       <div class="form-group col-md-6">
-        <label for="sitio&barangay">SITIO AND BARANGAY : </label>
-        <input type="text" class="form-control" id="sitio&barangay" placeholder="Sitio and barangay">
+        <label for="sitio_barangay">SITIO AND BARANGAY : </label>
+        <input type="text" class="form-control" id="sitio_barangay" placeholder="Sitio and barangay">
       </div>
       <div class="form-group col-md-3">
-        <label for="city/municipality">CITY / MUNICIPALITY : </label>
-        <input type="text" class="form-control" id="city/municipality" placeholder="City / Municipality">
+        <label for="city_municipality">CITY / MUNICIPALITY : </label>
+        <input type="text" class="form-control" id="city_municipality" placeholder="City / Municipality">
       </div>
       <div class="form-group col-md-3">
         <label for="province">PROVINCE : </label>
@@ -105,42 +149,31 @@
       <tbody>
         <tr>
           <th scope="row">1</th>
-          <td><textarea></textarea></td>
-          <td><textarea></textarea></td>
+          <td><textarea id="cellphone1"></textarea></td>
+          <td><textarea id="owner1"></textarea></td>
         </tr>
         <tr>
           <th scope="row">2</th>
-          <td><textarea></textarea></td>
-          <td><textarea></textarea></td>
+          <td><textarea id="cellphone2"></textarea></td>
+          <td><textarea id="owner2"></textarea></td>
         </tr>
       </tbody>
     </table>
     <p>What is your email address ?</p>
     <input type="email" class="form-control" id="email" placeholder="Email address">
 
-
-    <div class="form-group">
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="gridCheck">
-        <label class="form-check-label" for="gridCheck">
-          Check me out
-        </label>
-      </div>
-    </div>
-    <button type="submit" class="btn btn-primary">Sign in</button>
-  </form>
   <div class="container">
-    <h1>What is your email address?</h1>
-    <input type="text">
-    <h1>Do you have Facebook account?</h1>
+    <h5>Do you have Facebook account?</h5>
     <button type="button" class="btn btn-primary btn-lg">YES</button>
     <button type="button" class="btn btn-secondary btn-lg">NO</button>
 
-    <h1>SENIOR HIGH SCHOOL NAME:</h1>
+    <h5>SENIOR HIGH SCHOOL NAME:</h5>
+    <input type="text" id="high_school">
+    <h5>WHAT TRACK DID YOU ENROLL:</h5>
     <input type="text">
-    <h1>WHAT TRACK DID YOU ENROLL:</h1>
-    <input type="text">
-    <table class="table table-bordered">
+    <br>
+    <br>
+    <table class="table table-bordered">  
       <thead>
         <tr>
           <th scope="col">Academic</th>
@@ -156,7 +189,7 @@
                 <div class="input-group-text">
                   <input type="radio" aria-label="Radio button for following text input">
                 </div>
-                <h2 style="margin-left:10px;">ABM</h2>
+                <h4 style="margin-left:10px;">ABM</h4>
               </div>
 
             </div>
@@ -167,7 +200,7 @@
                 <div class="input-group-text">
                   <input type="radio" aria-label="Radio button for following text input">
                 </div>
-                <h2 style="margin-left:10px;">AGRI-FISHERY</h2>
+                <h4  style="margin-left:10px;">AGRI-FISHERY</h4 >
               </div>
 
             </div>
@@ -181,7 +214,7 @@
                 <div class="input-group-text">
                   <input type="radio" aria-label="Radio button for following text input">
                 </div>
-                <h2 style="margin-left:10px;">HUMSS</h2>
+                <h4  style="margin-left:10px;">HUMSS</h4 >
               </div>
 
             </div>
@@ -192,7 +225,7 @@
                 <div class="input-group-text">
                   <input type="radio" aria-label="Radio button for following text input">
                 </div>
-                <h2 style="margin-left:10px;"> HOME ECOMOMICS</h2>
+                <h4  style="margin-left:10px;"> HOME ECOMOMICS</h4 >
               </div>
 
             </div>
@@ -205,7 +238,7 @@
                 <div class="input-group-text">
                   <input type="radio" aria-label="Radio button for following text input">
                 </div>
-                <h2 style="margin-left:10px;">STEM</h2>
+                <h4  style="margin-left:10px;">STEM</h4 >
               </div>
 
             </div>
@@ -217,7 +250,7 @@
                 <div class="input-group-text">
                   <input type="radio" aria-label="Radio button for following text input">
                 </div>
-                <h2 style="margin-left:10px;">ICT</h2>
+                <h4  style="margin-left:10px;">ICT</h4 >
               </div>
 
             </div>
@@ -230,7 +263,7 @@
                 <div class="input-group-text">
                   <input type="radio" aria-label="Radio button for following text input">
                 </div>
-                <h2 style="margin-left:10px;">PRE-BACCALAUREATE</h2>
+                <h4 style="margin-left:10px;">PRE-BACCALAUREATE</h4 >
               </div>
 
             </div>
@@ -241,7 +274,7 @@
                 <div class="input-group-text">
                   <input type="radio" aria-label="Radio button for following text input">
                 </div>
-                <h2 style="margin-left:10px;">INDUSTRIAL ARTS</h2>
+                <h4  style="margin-left:10px;">INDUSTRIAL ARTS</h4 >
               </div>
 
             </div>
@@ -254,7 +287,7 @@
                 <div class="input-group-text">
                   <input type="radio" aria-label="Radio button for following text input">
                 </div>
-                <h2 style="margin-left:10px;">GENERAL ACADEMIC</h2>
+                <h4  style="margin-left:10px;">GENERAL ACADEMIC</h4 >
               </div>
 
             </div>
@@ -265,40 +298,37 @@
                 <div class="input-group-text">
                   <input type="radio" aria-label="Radio button for following text input">
                 </div>
-                <h2 style="margin-left:10px;">TVL MARITIME</h2>
+                <h4  style="margin-left:10px;">TVL MARITIME</h4 >
               </div>
 
             </div>
           </td>
-        </tr>
-
-      </tbody>
-    </table>
-    <br>
-    <table>
-      <tr>
-        <td>
+          </tr>
+        <tr>
+          <td>
           <div class="input-group">
             <div class="input-group-prepend">
               <div class="input-group-text">
                 <input type="radio" aria-label="Radio button for following text input">
               </div>
-              <h2 style="margin-left:10px;">SPORTS</h2>
+              <h4  style="margin-left:10px;">SPORTS</h4 >
             </div>
 
           </div>
         </td>
-        <td>
+                <td>
           <div class="input-group">
             <div class="input-group-prepend">
               <div class="input-group-text">
                 <input type="radio" aria-label="Radio button for following text input">
               </div>
-              <h2 style="margin-left:10px;">ARTS AND DESIGN</h2>
+              <h4  style="margin-left:10px;">ARTS AND DESIGN</h4 >
             </div>
 
           </div>
         </td>
+        </tr>
+
         <td>
           <div class="input-group">
             <label for="">OTHERS:</label>
@@ -306,53 +336,63 @@
 
           </div>
         </td>
-      </tr>
+        </tr>
+
+      </tbody>
     </table>
-    <h1>Did you have computer class in high school?</h1>
-    <button type="button" class="btn btn-primary btn-lg">YES</button>
-    <button type="button" class="btn btn-secondary btn-lg">NO</button>
-    <h1>Did you know how to use computer?</h1>
-    <button type="button" class="btn btn-primary btn-lg">YES</button>
-    <button type="button" class="btn btn-secondary btn-lg">NO</button>
-    <h1>Computer Skills(Please tick one or more skills that you have):</h1>
-    <input type="checkbox" name="" id="">Typing
-    <input type="checkbox" name="" id="">Ms Word
-    <input type="checkbox" name="" id="">MS Excel
-    <input type="checkbox" name="" id="">Internet
-    <input type="checkbox" name="" id="">E-mail
-
-    <h1>Do you receive help from an organization or the local government unit(LGU) supporting you in your
-      schooling(financial sponsorship)?</h1>
-    <button type="button" class="btn btn-primary btn-lg">YES</button>
-    <button type="button" class="btn btn-secondary btn-lg">NO</button>
-    <h1>Name of the sponsor / supporting NGO, if there is one:</h1>
-    <input type="text" name="" id="">
     <br>
-    <h1>FAMILY BACKGROUD:</h1>
+    <h5>Did you have computer class in high school?</h5>
+    <button type="button" class="btn btn-primary btn-lg">YES</button>
+    <button type="button" class="btn btn-secondary btn-lg">NO</button>
+    <h5>Did you know how to use computer?</h5>
+    <button type="button" class="btn btn-primary btn-lg">YES</button>
+    <button type="button" class="btn btn-secondary btn-lg">NO</button>
+    <h5>Computer Skills(Please tick one or more skills that you have):</h5>
+    <input type="checkbox" name="" id="typing">Typing
+    <input type="checkbox" name="" id="msword">Ms Word
+    <input type="checkbox" name="" id="msexcel">MS Excel
+    <input type="checkbox" name="" id="internet">Internet
+    <input type="checkbox" name="" id="email">E-mail
 
-    <h1>How many brothers and sisters do you have?<input type="text"></h1>
-    <h1>Whar is your rank among the siblings?<input type="text"></h1>
-    <h1>Please indicate the occupation of your:
+    <h5>Do you receive help from an organization or the local government unit(LGU) supporting you in your
+      schooling(financial sponsorship)?</h5>
+    <button type="button" class="btn btn-primary btn-lg">YES</button>
+    <button type="button" class="btn btn-secondary btn-lg">NO</button>
+    <h5>Name of the sponsor / supporting NGO, if there is one:</h5>
+    <input type="text" name="" id="sponsor">
+    <br>
+    <h5>FAMILY BACKGROUD:</h5>
+
+    <h5>How many brothers and sisters do you have?<input type="text" id="sibling"></h5>
+    <h5>Whar is your rank among the siblings?<input type="text" id="rsibling" ></h5>
+    <h5>Please indicate the occupation of your:
       <br>
       Father:
-      <input type="text">
+      <input type="text" id="fathername">
       Income:
-      <input type="text">
+      <input type="text" id="fincome">
       Mother:
-      <input type="text">
+      <input type="text" id="mothername">
+      <br>
       Income:
-      <input type="text">
+      <input type="text" id="mincome">
     </h1>
-    <h1>Parents' Situation</h1>
-    <input type="checkbox" name="" id="">Married
-    <input type="checkbox" name="" id="">Live-in
-    <input type="checkbox" name="" id="">Separated
-    <input type="checkbox" name="" id="">Father left
-    <input type="checkbox" name="" id="">Father died
-    <input type="checkbox" name="" id="">Mother left
-    <input type="checkbox" name="" id="">Mother died
-    <h1>What is your motivation for entering the Passerellesnumeriques scholarship program?(minimum of 300 words)</h1>
-    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <h5>Parents' Situation</h5>
+    <input type="checkbox" name="" id="married">Married
+    <input type="checkbox" name="" id="live-in">Live-in
+    <input type="checkbox" name="" id="separated">Separated
+    <input type="checkbox" name="" id="fatherleft">Father left
+    <input type="checkbox" name="" id="fatherdied">Father died
+    <input type="checkbox" name="" id="motherlive">Mother left
+    <input type="checkbox" name="" id="motherdied">Mother died
+    <h5>What is your motivation for entering the Passerellesnumeriques scholarship program?(minimum of 300 words)</h5>
+    <textarea name="" id="motivation" cols="30" rows="10"></textarea>
+    <center>
+    <button type="button" class="btn btn-sucess btn-outline-success" id="register" data-toggle="button"
+                        aria-pressed="false" autocomplete="off">
+                       register
+                    </button>
+                </center>
     </div>
     <p>Join us on facebook to get the updates: www.facebook.com/selection.process</p>
     </form>
@@ -371,6 +411,8 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="/controller.js"></script>
 </body>
 
 </html>
