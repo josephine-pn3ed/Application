@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
-
-var Schema = new mongoose.Schema({
+const Schema = mongoose.Schema;
+var ApplicantSchema = new Schema({
    name: {type:String, required:true},
    birthdate: {type:String, required: true},
    address: {
@@ -36,14 +36,26 @@ var Schema = new mongoose.Schema({
    motivation: String
 });
 
-Schema.statics.addStudent = async function (student){
-   var Person = new this(student);
-   var result =  await Person.save(student);
+ApplicantSchema.statics.addApplicant = async function (applicant){
+   var Applicant = new this(applicant);
+   var result =  await Applicant.save(applicant);
    return result;
 }
 
-Schema.statics.getLastStudent = async function () {
+ApplicantSchema.statics.getLastApplicant = async function () {
    return await this.findOne().sort({_id:-1}).limit(1);
 }
 
-module.exports = mongoose.model('student_info', Schema);
+ApplicantSchema.statics.getApplicants = async function () {
+   return await this.find();
+}
+
+ApplicantSchema.statics.updateApplicant = async function (name) {
+   return await this.updateOne({name : name}, {$set : {comment : "confirmed"}});
+}
+
+ApplicantSchema.statics.removeApplicant = async function (name) {
+   return await this.deleteOne({name : name});
+} 
+
+module.exports = mongoose.model('Applicant', ApplicantSchema);
